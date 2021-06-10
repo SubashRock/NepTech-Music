@@ -1,0 +1,118 @@
+*,
+*::after,
+*::before{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header{
+    font-size: 2.5rem;
+    padding-bottom: 5rem;
+}
+html{
+    font-size: 62.5%;
+    
+}
+.main-body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff7f7;
+    display: grid;
+    place-items: center;
+}
+.music-container{
+    width: 50rem; /* 1 rem = 16px */
+    height: 55rem;
+    background-color: #b9b2b2;
+    border-radius: 2rem;
+    padding: 2rem;
+    text-align: center;
+    
+}
+
+.music-container #title{
+    text-transform: capitalize;
+    letter-spacing: 0.5rem;
+    word-spacing: 1rem;
+    color: black;
+    margin: 0.2rem 0 0.5 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+.music-container #artist{
+    color: rgb(66, 63, 61);
+    text-transform: capitalize;
+    letter-spacing: 0.3rem;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    padding-top: 0.2rem;
+    font-weight: 200;
+
+}
+.img-container{
+    width: 25rem;
+    height: 22rem; 
+    margin: auto;
+}
+
+img{
+    width: 90%;
+    height: 100%;
+    border-radius:50%;
+    cursor: pointer;
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(189, 182, 182, 0.3);
+    object-fit: cover; /* It makes sures that child div taking 100% width and height of parent div */
+
+}
+
+.music-controls{
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.music-controls .fas{
+    color:black;
+    font-size: 2rem;
+    cursor: pointer;
+    filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0 , 0 , 0 , 0.4));
+}
+.music-controls .main-button{
+    width: 5rem;
+    height: 5rem;
+    background-color: black;
+    border-radius: 50%;
+    color: #f6f6f6;
+    font-size: 1.4rem;
+    /* add display flex to center the icons*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-controls .fas:hover{
+    color: grey;
+}
+.music-controls .main-button:hover{
+background-color: grey;
+color: black;
+}
+
+/* adding animation and add anime class to animate */
+.anime{
+    animation: rotatePlayer 5s linear infinite;
+
+}
+@keyframes rotatePlayer{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+
+}
